@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import CenteredLayout from './CenteredLayout';
 
-const StudentSelection = ({ classroom, onSelect }) => {
+const StudentSelection = ({ classroom, onSelect, onBack, buttonStyle }) => {
   const [students, setStudents] = useState([]);
   const [selectedStudents, setSelectedStudents] = useState([]);
 
@@ -26,42 +27,40 @@ const StudentSelection = ({ classroom, onSelect }) => {
   };
 
   return (
-    <div style={{ padding: '1rem' }}>
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Select students from {classroom}</h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+    <CenteredLayout>
+      <h2 style={{ marginBottom: '20px', fontSize: '1.5rem' }}>Select students from {classroom}</h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '20px', maxWidth: '600px' }}>
         {students.map(student => (
           <button 
             key={student.id} 
             onClick={() => toggleStudent(student)}
             style={{ 
-              padding: '0.5rem', 
+              ...buttonStyle,
               backgroundColor: selectedStudents.includes(student) ? '#0056b3' : '#e9ecef',
               color: selectedStudents.includes(student) ? 'white' : 'black',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer'
             }}
           >
             {student.name}
           </button>
         ))}
       </div>
-      <button 
-        onClick={() => onSelect(selectedStudents)} 
-        style={{ 
-          marginTop: '1rem', 
-          padding: '0.5rem 1rem', 
-          backgroundColor: selectedStudents.length === 0 ? '#6c757d' : '#0056b3',
-          color: 'white',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: selectedStudents.length === 0 ? 'not-allowed' : 'pointer'
-        }}
-        disabled={selectedStudents.length === 0}
-      >
-        Next
-      </button>
-    </div>
+      <div style={{ display: 'flex', justifyContent: 'center', width: '100%', gap: '1rem' }}>
+        <button onClick={onBack} style={{ ...buttonStyle, backgroundColor: '#6c757d' }}>
+          Back
+        </button>
+        <button 
+          onClick={() => onSelect(selectedStudents)} 
+          style={{ 
+            ...buttonStyle,
+            backgroundColor: selectedStudents.length === 0 ? '#6c757d' : '#0056b3',
+            cursor: selectedStudents.length === 0 ? 'not-allowed' : 'pointer'
+          }}
+          disabled={selectedStudents.length === 0}
+        >
+          Next
+        </button>
+      </div>
+    </CenteredLayout>
   );
 };
 

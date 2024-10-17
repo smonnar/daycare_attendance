@@ -1,27 +1,20 @@
 import React from 'react';
+import CenteredLayout from './CenteredLayout';
 
-const LandingPage = ({ onStart }) => (
-  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+const LandingPage = ({ onStart, buttonStyle }) => (
+  <CenteredLayout>
     <img 
       src="https://palmettochristian.com/wp-content/uploads/sites/28/2020/03/PCL_Kidslogo_Blue.png" 
       alt="PCS Logo" 
-      style={{ marginBottom: '2rem', maxWidth: '300px' }}
+      style={{ marginBottom: '2rem', maxWidth: '600px' }}
     />
     <button 
       onClick={onStart} 
-      style={{ 
-        fontSize: '1.5rem', 
-        padding: '1rem 2rem', 
-        backgroundColor: '#0056b3', 
-        color: 'white', 
-        border: 'none', 
-        borderRadius: '5px', 
-        cursor: 'pointer' 
-      }}
+      style={{ ...buttonStyle, fontSize: '1.5rem', padding: '1rem 2rem' }}
     >
-      Touch here to begin
+      Touch anywhere to begin
     </button>
-  </div>
+  </CenteredLayout>
 );
 
 export default LandingPage;
