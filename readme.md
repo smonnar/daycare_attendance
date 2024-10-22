@@ -47,7 +47,9 @@ The **Daycare Attendance App** is a web-based kiosk application developed for Pa
    ```
 
 ## Contributing
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+Please read [CONTRIBUTING.md](https://github.com/smonnar/daycare_attendance/blob/master/docs/contributing-md.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License. You are free to use, modify, and distribute this code in your own projects, however, you must include the original copyright notice and this license in any distributions of this software.
+
+You can find the full text of the MIT License [here](https://github.com/smonnar/daycare_attendance/blob/master/LICENSE).

@@ -3,7 +3,7 @@
 We welcome contributions to the **Daycare Attendance App**! This document outlines the process for contributing to this project.
 
 ## Code of Conduct
-By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
+By participating in this project, you agree to abide by our [Code of Conduct](https://github.com/smonnar/daycare_attendance/blob/master/docs/%20CODE_OF_CONDUCT.md).
 
 ## How to Contribute
 1. Fork the repository.
@@ -13,8 +13,8 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 
 ## Pull Request Process
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
-2. Update the [README](readme-md.md) with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the [README](readme-md.md) to the new version that this Pull Request would represent.
+2. Update the [README](https://github.com/smonnar/daycare_attendance/blob/master/readme.md) with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations and container parameters.
+3. Increase the version numbers in any examples files and the [README](https://github.com/smonnar/daycare_attendance/blob/master/readme.md) to the new version that this Pull Request would represent.
 4. Your pull request will be merged once it has been reviewed and approved by a maintainer.
 
 ## Coding Standards
